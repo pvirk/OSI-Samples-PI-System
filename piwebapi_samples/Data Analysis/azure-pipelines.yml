@@ -5,7 +5,7 @@ trigger:
       - master
   paths:
     include:
-      - '/piwebapi_samples/Python'
+      - '/piwebapi_samples/Data Analysis'
 
 pr:
   branches:
@@ -13,7 +13,7 @@ pr:
       - master
   paths:
     include:
-      - '/piwebapi_samples/Python'
+      - '/piwebapi_samples/Data Analysis'
 
 schedules:
   - cron: '0 0 * * 0'
@@ -26,7 +26,7 @@ schedules:
 variables:
   - template: '/miscellaneous/build_templates/variables.yml'
   - name: projPath
-    value: '/piwebapi_samples/Python'
+    value: '/piwebapi_samples/Data Analysis'
   - name: CredFile
     value: test_config.py
   - name: CredFileLibrary
@@ -49,18 +49,11 @@ jobs:
           filePath: $(projPath)
 
       - script: |
-          echo Install pip
-          call python -m pip install --upgrade pip
-          echo Install tools
-          call pip install requests
-          call pip install requests_kerberos
-          call pip install unittest
-          call pip install unittest-xml-reporting
-          echo Install requirements
-          call pip install -r requirements.txt
-          echo Run tests
-          call python run_all_tests.py 2>&1
-          echo Complete
+          echo Starting
+          echo %DATE% %TIME%
+          set
+          dir *.*
+          echo Ending
         workingDirectory: $(Build.SourcesDirectory)$(projPath)
         displayName: 'Run tests'
 

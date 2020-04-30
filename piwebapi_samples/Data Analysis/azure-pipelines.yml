@@ -42,6 +42,14 @@ jobs:
       name: 00-OSIManaged-Test
       demands: COMPUTERNAME -equals $(buildAgent)
     steps:
+      - task: NuGetToolInstaller@1
+        inputs:
+          versionSpec: 
+      - task: NuGetCommand@2
+        inputs:
+          command: 'restore'
+          restoreSolution: '**/PIUploadUtility.sln'
+          feedsToUse: 'select'
       - task: VSBuild@1
         inputs:
           solution: '**\PIUploadUtility.sln'

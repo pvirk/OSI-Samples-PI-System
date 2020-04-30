@@ -51,7 +51,7 @@ jobs:
         inputs:
           sourceFolder: "$(Build.SourcesDirectory)"
           targetFolder: "$(Build.BinariesDirectory)"
-          contents: "**/bin/${{ parameters.BuildConfiguration }}/*"
+          contents: "**/bin/Debug/*"
           overWrite: true
           flattenFolders: true
       - task: PublishBuildArtifacts@1

@@ -37,6 +37,33 @@ variables:
     value: PIWebAPI_Python
 
 jobs:
+  - job: BuildUploadUtility
+    pool:
+      name: 00-OSIManaged-Test
+      demands: COMPUTERNAME -equals $(buildAgent)
+    steps:
+      - task: VSBuild@1
+        inputs:
+          solution: '**\PIUploadUtility.sln'
+          configuration: Debug
+      - task: CopyFiles@2
+        displayName: Copy Build Output Files
+        inputs:
+          sourceFolder: "$(Build.SourcesDirectory)"
+          targetFolder: "$(Build.BinariesDirectory)"
+          contents: "**/bin/${{ parameters.BuildConfiguration }}/*"
+          overWrite: true
+          flattenFolders: true
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.BinariesDirectory)'
+          ArtifactName: 'PIUploadUtility'
+          publishLocation: 'Container'
+      - task: PowerShell@2
+        inputs:
+          targetType: 'inline'
+          script: #'&"$(Build.BinariesDirectory)"/PIUploadUtility.exe'
+
   - job: Tests
     pool:
       name: 00-OSIManaged-Test

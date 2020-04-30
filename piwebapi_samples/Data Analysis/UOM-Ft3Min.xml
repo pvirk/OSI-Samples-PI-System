@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AF xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="OSIsoft.AF.xsd" SchemaVersion="2.0" SoftwareVersion="2.10.8.440" ExportMode="NoUniqueID" ExportedObject="UOMDatabase" ExportedType="UOMDatabase" Identity="UOMDatabase" >
+  <UOMDatabase>
+    <UOM>
+      <Name>cubic foot per minute</Name>
+      <Abbreviation>ft3/min</Abbreviation>
+      <Description>SCFM</Description>
+      <RefFactor>60</RefFactor>
+      <RefUOM>cubic foot per second</RefUOM>
+      <Class>Volume Flow Rate</Class>
+    </UOM>
+  </UOMDatabase>
+</AF>

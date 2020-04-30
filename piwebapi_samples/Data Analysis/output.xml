@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<testsuite name="TestNotebook-20200429234757" tests="2" time="0.293" failures="0" errors="0">
+	<testcase classname="TestNotebook" name="test_get" time="0.056"/>
+	<testcase classname="TestNotebook" name="test_post" time="0.237"/>
+	<system-out><![CDATA[201
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

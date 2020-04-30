@@ -5,7 +5,7 @@ trigger:
       - master
   paths:
     include:
-      - '/piwebapi_samples/Python'
+      - '/piwebapi_samples/Data Analysis'
 
 pr:
   branches:
@@ -13,7 +13,7 @@ pr:
       - master
   paths:
     include:
-      - '/piwebapi_samples/Python'
+      - '/piwebapi_samples/Data Analysis'
 
 schedules:
   - cron: '0 0 * * 0'

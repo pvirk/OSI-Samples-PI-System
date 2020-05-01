@@ -192,9 +192,10 @@ namespace PIUploadUtility
        
         static void Main(string[] args)
         {
-           
-            string dataserver = "MSPYTHONTALK";
-            string assetserver = "RESTUNIT";
+            JObject config = JObject.Parse(File.ReadAllText(@"..\..\..\..\..\test_config.json"));
+
+            string dataserver = config["PI_SERVER_NAME"].ToString();
+            string assetserver = config["AF_SERVER_NAME"].ToString();
 
             //Create and Import Database from Building Example file
             XmlDocument doc = new XmlDocument();

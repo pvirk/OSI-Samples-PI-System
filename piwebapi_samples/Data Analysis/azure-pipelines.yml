@@ -26,11 +26,11 @@ schedules:
 variables:
   - template: '/miscellaneous/build_templates/variables.yml'
   - name: projPath
-    value: '/piwebapi_samples/Python'
+    value: '/piwebapi_samples/Data Analysis'
   - name: CredFile
-    value: test_config.py
+    value: test_config.json
   - name: CredFileLibrary
-    value: product-readiness.piwebapi_python.py
+    value: product-readiness.piwebapi_data_analysis.json
   - name: covStream
     value: PIWebAPIPython
   - name: bdProject
@@ -70,7 +70,7 @@ jobs:
       - task: PowerShell@2
         inputs:
           targetType: 'inline'
-          script: #'&"$(Build.BinariesDirectory)"/PIUploadUtility.exe'
+          script: '&"$(Build.BinariesDirectory)"/PIUploadUtility.exe'
 
   - job: Tests
     pool:
@@ -94,7 +94,7 @@ jobs:
           echo Install requirements
           call pip install -r requirements.txt
           echo Run tests
-          call python run_all_tests.py 2>&1
+          call jupyter nbconvert --to notebook --inplace --ExecuteProcessor.timeout=6000 --execute Sandbox.ipynb
           echo Complete
         workingDirectory: $(Build.SourcesDirectory)$(projPath)
         displayName: 'Run tests'

@@ -1,5 +1,5 @@
 {
-	"PIWEBAPI_URL": "https://localhost/piwebapi",
+	"PIWEBAPI_URL": "https://localhost/piwebapi/",
 	"AF_SERVER_NAME": "",
 	"PI_SERVER_NAME": "",
 	"AF_DATABASE_NAME": "",

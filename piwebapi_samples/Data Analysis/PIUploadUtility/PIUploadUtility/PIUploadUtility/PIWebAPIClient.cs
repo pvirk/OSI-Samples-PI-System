@@ -2,9 +2,6 @@
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Newtonsoft.Json;
-using System.Xml;
-using System.Net;
 using Newtonsoft.Json.Linq;
 using System.Text;
 

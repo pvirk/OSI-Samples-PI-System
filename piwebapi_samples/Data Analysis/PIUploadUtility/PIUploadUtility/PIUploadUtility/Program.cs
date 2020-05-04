@@ -1,24 +1,19 @@
 ﻿using System;
-using System.Threading.Tasks;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
 using System.Xml;
-using System.Net;
-using Newtonsoft.Json.Linq;
 using System.IO;
-using System.Linq;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace PIUploadUtility
 {
     class Program
     {
-        static string baseurl = @"https://localhost/piwebapi/";
+        
 
-        static JObject creds = JObject.Parse(File.ReadAllText(@"..\..\..\..\..\credentials.json"));
-
-        static PIWebAPIClient client = new PIWebAPIClient(creds["domain"].ToString() + @"\"+creds["username"].ToString() , creds["password"].ToString());
+        static JObject config = JObject.Parse(File.ReadAllText(@"..\..\..\..\..\test_config.json"));
+        static string baseurl = config["PIWEBAPI_URL"].ToString();
+        static PIWebAPIClient client = new PIWebAPIClient(config["USER_NAME"].ToString() , config["USER_PASSWORD"].ToString());
 
         static string GetWebIDByPath(string path, string resource)
         {
@@ -45,8 +40,7 @@ namespace PIUploadUtility
 
             string createDBQuery = baseurl + "assetservers/" + assetserverWebID + "/assetdatabases";
 
-            Guid random = Guid.NewGuid();
-            string databaseName = "Building Example-" + random.ToString();
+            string databaseName = config["AF_DATABASE_NAME"].ToString();
 
             Object payload = new 
             {

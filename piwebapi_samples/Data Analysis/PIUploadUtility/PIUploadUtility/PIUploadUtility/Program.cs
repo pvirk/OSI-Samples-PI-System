@@ -210,8 +210,6 @@ namespace PIUploadUtility
 
             //Update values from existing csv file
             UpdateValues(dataserver);
-
-            Console.ReadKey();
         }
     }
 }

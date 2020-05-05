@@ -70,7 +70,7 @@ jobs:
       - task: PowerShell@2
         inputs:
           targetType: 'inline'
-          script: '&"$(Build.BinariesDirectory)"/PIUploadUtility.exe'
+          script: '&"$(Build.BinariesDirectory)/PIUploadUtility.exe"'
 
   - job: Tests
     pool:

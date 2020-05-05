@@ -30,7 +30,7 @@ variables:
   - name: CredFile
     value: test_config.json
   - name: CredFileLibrary
-    value: product-readiness.piwebapi_data_analysis.json
+    value: product-readiness.piweb_da.json
   - name: covStream
     value: PIWebAPIPython
   - name: bdProject

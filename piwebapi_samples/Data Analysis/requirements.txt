@@ -1,15 +1,5 @@
 jupyter
-json
-getpass
-requests
 pandas
 numpy
-pprint
 urllib3
-datetime
-dateutil.parser
-sklearn
 matplotlib
-types
-uuid
-io

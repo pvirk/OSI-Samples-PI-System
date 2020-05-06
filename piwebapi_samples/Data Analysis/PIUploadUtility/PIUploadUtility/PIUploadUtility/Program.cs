@@ -15,12 +15,11 @@ namespace PIUploadUtility
         static readonly string defaultPIDataFile = @"..\..\pidata.csv";
 
         static JObject config;
-        static string baseurl;
         static PIWebAPIClient client;
 
         static string GetWebIDByPath(string path, string resource)
         {
-            string query = baseurl + resource + "?path=" + path;
+            string query = resource + "?path=" + path;
             Console.WriteLine("Get WEb ID Query:" + query);
 
             try
@@ -42,7 +41,7 @@ namespace PIUploadUtility
             string serverPath = "\\\\" + assetserver;
             string assetserverWebID = GetWebIDByPath(serverPath, "assetservers");
 
-            string createDBQuery = baseurl + "assetservers/" + assetserverWebID + "/assetdatabases";
+            string createDBQuery = "assetservers/" + assetserverWebID + "/assetdatabases";
 
             Console.WriteLine("Create Database Query" + createDBQuery);
 
@@ -67,7 +66,7 @@ namespace PIUploadUtility
             
             string databasePath = serverPath + "\\" + databaseName;
             string databaseWebID = GetWebIDByPath(databasePath, "assetdatabases");
-            string importQuery = baseurl + "assetdatabases/" + databaseWebID + "/import";
+            string importQuery = "assetdatabases/" + databaseWebID + "/import";
 
             try
             {
@@ -83,7 +82,7 @@ namespace PIUploadUtility
         {
             string path = "\\\\PIServers[" + dataserver + "]";
             string dataserverWebID = GetWebIDByPath(path, "dataservers");
-            string createPIPointQuery = baseurl + "dataservers/" + dataserverWebID + "/points";
+            string createPIPointQuery = "dataservers/" + dataserverWebID + "/points";
             
             var tagDefinitions = File.ReadLines(tagDefinitionLocation);
             string name, pointType, pointClass;
@@ -120,7 +119,7 @@ namespace PIUploadUtility
             string tagname = "VAVCO 2-09.Predicted Cooling Time";
            
             string path = "\\\\" + dataserver + "\\" + tagname;
-            string getPointQuery = baseurl + "points?path=" + path;
+            string getPointQuery = "points?path=" + path;
 
             try
             {
@@ -161,7 +160,7 @@ namespace PIUploadUtility
 
                 string path = "\\\\" + dataserver + "\\" + tagname;
                 string webid = GetWebIDByPath(path, "points");
-                string updateValueQuery = baseurl + "streamsets/recorded";
+                string updateValueQuery = "streamsets/recorded";
 
                 List<Object> items = new List<Object>();
                 foreach (string[] line in entries)
@@ -222,8 +221,10 @@ namespace PIUploadUtility
             }
 
             config = JObject.Parse(File.ReadAllText(configFile));
-            baseurl = config["PIWEBAPI_URL"].ToString();
-            client = new PIWebAPIClient(config["USER_NAME"].ToString(), config["USER_PASSWORD"].ToString());
+            client = new PIWebAPIClient(
+                config["PIWEBAPI_URL"].ToString(),
+                config["USER_NAME"].ToString(),
+                config["USER_PASSWORD"].ToString());
 
             string dataserver = config["PI_SERVER_NAME"].ToString();
             string assetserver = config["AF_SERVER_NAME"].ToString();

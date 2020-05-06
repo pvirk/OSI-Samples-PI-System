@@ -17,9 +17,17 @@ namespace PIUploadUtility
             client.DefaultRequestHeaders.Add("X-Requested-With", "xhr");
         }
 
-        public PIWebAPIClient(string username, string password)
+        public PIWebAPIClient(string baseAddress, string username, string password)
         {
             client = new HttpClient();
+
+            //Base address must end with a '/'
+            if (baseAddress[baseAddress.Length - 1] != '/')
+            {
+                baseAddress += "/";
+            }
+
+            client.BaseAddress = new Uri(baseAddress);
             string creds = Convert.ToBase64String(
                 System.Text.Encoding.ASCII.GetBytes(String.Format("{0}:{1}", username, password)));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", creds);

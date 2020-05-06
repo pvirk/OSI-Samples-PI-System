@@ -8,6 +8,7 @@ jobs:
     pool:
       name: 00-OSIManaged-Test
       demands: COMPUTERNAME -equals $(buildAgent)
+    dependsOn: Tests
     steps:
       # Build Sample
       # - DotNet

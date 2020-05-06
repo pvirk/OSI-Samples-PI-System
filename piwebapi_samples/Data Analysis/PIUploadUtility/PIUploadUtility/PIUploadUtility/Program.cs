@@ -9,11 +9,14 @@ namespace PIUploadUtility
 {
     class Program
     {
-        
+        static readonly string defaultConfigFile = @"..\..\..\..\..\test_config.json";
+        static readonly string defaultDatabaseFileFile = @"..\..\Building Example.xml";
+        static readonly string defaultTagDefinitionFile = @"..\..\tagdefinition.csv";
+        static readonly string defaultPIDataFile = @"..\..\pidata.csv";
 
-        static JObject config = JObject.Parse(File.ReadAllText(@"..\..\..\..\..\test_config.json"));
-        static string baseurl = config["PIWEBAPI_URL"].ToString();
-        static PIWebAPIClient client = new PIWebAPIClient(config["USER_NAME"].ToString() , config["USER_PASSWORD"].ToString());
+        static JObject config;
+        static string baseurl;
+        static PIWebAPIClient client;
 
         static string GetWebIDByPath(string path, string resource)
         {
@@ -24,7 +27,7 @@ namespace PIUploadUtility
                 JObject response = client.GetRequest(query);
                 return response["WebId"].ToString();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.InnerException.Message);
             }
@@ -34,7 +37,6 @@ namespace PIUploadUtility
 
         static void CreateDatabase(XmlDocument doc, string assetserver)
         {
-
             string serverPath = "\\\\" + assetserver;
             string assetserverWebID = GetWebIDByPath(serverPath, "assetservers");
 
@@ -44,8 +46,8 @@ namespace PIUploadUtility
 
             Object payload = new 
             {
-                 Name= databaseName,
-                 Description= "Example for Building Data"  
+                 Name = databaseName,
+                 Description = "Example for Building Data"  
             };
 
             string request_body = JsonConvert.SerializeObject(payload);
@@ -54,7 +56,7 @@ namespace PIUploadUtility
             {
                 client.PostRequest(createDBQuery, request_body);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.InnerException.Message);
             }
@@ -67,19 +69,19 @@ namespace PIUploadUtility
             {
                 client.PostRequest(importQuery, doc.InnerXml.ToString(), true);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.InnerException.Message);
             }
         }
 
-        static void CreatePIPoint(string dataserver)
+        static void CreatePIPoint(string dataserver, string tagDefinitionLocation)
         {
             string path = "\\\\PIServers[" + dataserver + "]";
             string dataserverWebID = GetWebIDByPath(path, "dataservers");
             string createPIPointQuery = baseurl + "dataservers/" + dataserverWebID + "/points";
             
-            var tagDefinitions = File.ReadLines(@"..\..\tagdefinition.csv");
+            var tagDefinitions = File.ReadLines(tagDefinitionLocation);
             string name, pointType, pointClass;
 
             foreach (string tagDefinition in tagDefinitions)
@@ -102,7 +104,7 @@ namespace PIUploadUtility
                 {
                     client.PostRequest(createPIPointQuery, request_body);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.InnerException.Message);
                 }
@@ -120,31 +122,34 @@ namespace PIUploadUtility
             {
                 JObject result = client.GetRequest(getPointQuery);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 if (e.InnerException.Message.Contains("404"))
+                {
                     return false;
+                }
                 else
+                {
                     Console.WriteLine(e.InnerException.Message);
+                }
             }
             
             return true;
         }
-        static void UpdateValues(string dataserver)
+        static void UpdateValues(string dataserver, string tagDefinitionLocation, string PIDataLocation)
         {
-            
-            var tags = File.ReadLines(@"..\..\tagdefinition.csv");
+            var tags = File.ReadLines(tagDefinitionLocation);
 
-            foreach(string tag in tags)
+            foreach (string tag in tags)
             {
                 string[] split = tag.Split(',');
                 string tagname = split[0];
                 List<string[]> entries = new List<string[]>();
 
-                var values = File.ReadLines(@"..\..\pidata.csv");
-                foreach(string value in values)
+                var values = File.ReadLines(PIDataLocation);
+                foreach (string value in values)
                 {
-                    if(value.Contains(tagname))
+                    if (value.Contains(tagname))
                     {
                         entries.Add(value.Split(','));
                     }
@@ -177,7 +182,7 @@ namespace PIUploadUtility
                 {
                     client.PostRequest(updateValueQuery, request_body);
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Console.WriteLine(e.InnerException.Message);
                 }
@@ -186,24 +191,52 @@ namespace PIUploadUtility
        
         static void Main(string[] args)
         {
-            JObject config = JObject.Parse(File.ReadAllText(@"..\..\..\..\..\test_config.json"));
+            //Use the default values provided above (which work when running from visual studio) or use the values provided by command line arguments
+            string configFile = defaultConfigFile;
+            string databaseFile = defaultDatabaseFileFile;
+            string tagDefinitionFile = defaultTagDefinitionFile;
+            string piDataFile = defaultPIDataFile;
+
+            if (args.Length >= 1)
+            {
+                databaseFile = args[0];
+            }
+
+            if (args.Length >= 2)
+            {
+                tagDefinitionFile = args[1];
+            }
+
+            if (args.Length >= 3)
+            {
+                piDataFile = args[2];
+            }
+
+            if (args.Length >= 4)
+            {
+                configFile = args[3];
+            }
+
+            config = JObject.Parse(File.ReadAllText(configFile));
+            baseurl = config["PIWEBAPI_URL"].ToString();
+            client = new PIWebAPIClient(config["USER_NAME"].ToString(), config["USER_PASSWORD"].ToString());
 
             string dataserver = config["PI_SERVER_NAME"].ToString();
             string assetserver = config["AF_SERVER_NAME"].ToString();
 
             //Create and Import Database from Building Example file
             XmlDocument doc = new XmlDocument();
-            doc.Load(@"..\..\Building Example.xml");
+            doc.Load(databaseFile);
             CreateDatabase(doc, assetserver);
 
             //Check for and create tags
             if (!IsTagExist(dataserver))
             {
-                CreatePIPoint(dataserver);
+                CreatePIPoint(dataserver, tagDefinitionFile);
             }
 
             //Update values from existing csv file
-            UpdateValues(dataserver);
+            UpdateValues(dataserver, tagDefinitionFile, piDataFile);
         }
     }
 }

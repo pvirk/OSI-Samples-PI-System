@@ -103,7 +103,7 @@ jobs:
           DetectArguments: |
             --detect.project.name="product-readiness.$(bdProject)"
             --detect.project.version.name="$(Build.SourceBranchName)"
-            --detect.source.path=$(Build.SourcesDirectory)$(projPath)/
+            --detect.source.path="$(Build.SourcesDirectory)$(projPath)/"
             --detect.code.location.name="code_location_$(bdProject)_$(Build.SourceBranchName)"
             --detect.bom.aggregate.name="bom_$(bdProject)_$(Build.SourceBranchName)"
         condition: and(succeeded(), ne('${{ parameters.language }}', 'python'))
@@ -120,15 +120,15 @@ jobs:
           DetectArguments: |
             --detect.project.name="product-readiness.$(bdProject)"
             --detect.project.version.name="$(Build.SourceBranchName)"
-            --detect.source.path=$(Build.SourcesDirectory)$(projPath)/
+            --detect.source.path="$(Build.SourcesDirectory)$(projPath)/"
             --detect.code.location.name="code_location_$(bdProject)_$(Build.SourceBranchName)"
             --detect.bom.aggregate.name="bom_$(bdProject)_$(Build.SourceBranchName)"
-            --detect.pip.requirements.path=$(Build.SourcesDirectory)$(projPath)/requirements.txt
+            --detect.pip.requirements.path="$(Build.SourcesDirectory)$(projPath)/requirements.txt"
         condition: and(succeeded(), eq('${{ parameters.language }}', 'python'))
         displayName: 'Synopsys (Python): Detect (Requirements.txt)'
 
       # Coverity
-      - script: if not exist $(covFolder) mkdir $(covFolder)
+      - script: if not exist "$(covFolder)" mkdir "$(covFolder)"
         workingDirectory: $(Build.SourcesDirectory)$(projPath)/
         displayName: 'Coverity: Make dir'
         continueOnError: true
@@ -140,7 +140,7 @@ jobs:
           echo Restore
           call dotnet restore
           echo Build
-          "$(covPath)cov-build" --dir $(covFolder) dotnet build
+          "$(covPath)cov-build" --dir "$(covFolder)" dotnet build
           echo Complete
         workingDirectory: $(Build.SourcesDirectory)$(projPath)/
         displayName: 'Coverity (DotNet): Build'
@@ -151,7 +151,7 @@ jobs:
           echo Clean
           call mvn clean
           echo Build
-          "$(covPath)cov-build" --dir $(covFolder) mvn compile
+          "$(covPath)cov-build" --dir "$(covFolder)" mvn compile
           echo Complete
         workingDirectory: $(Build.SourcesDirectory)$(projPath)/
         displayName: 'Coverity (Java): Build'

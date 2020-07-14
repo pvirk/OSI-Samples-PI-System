@@ -224,9 +224,9 @@ Verify that your bucket has a hierarchy with the files and folders matching the 
 |--> <SetupKitsFolderName>
    |--> PIServer
       |--> pilicense.dat
-      |--> PI Server_2018 SP3 Patch 1_.exe
+      |--> PI-Server_2018-SP3-Patch-1_.exe
    |--> PIVision
-      |--> PI Vision_2019 Patch 1_.exe
+      |--> PI-Vision_2019-Patch-1_.exe
    |--> PI-System-Deployment-Tests.zip
 ```
 ### Step 5: Launch the Deployment Sample
@@ -307,9 +307,9 @@ DSS3BucketRegion | us-west-1 | Region for Deployment Samples S3 Bucket. Used in 
 SetupKitsS3BucketName | *Requires Input* | S3 bucket name for the Setup Kit assets. This contains the install media for a PI System. Bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).
 SetupKitsS3KeyPrefix | osisetupkits | Setup Kits key prefix can include numbers, lowercase letters, uppercase letters, hyphens (-), and forward slash (/). It cannot start or end with forward slash.
 SetupKitsS3BucketRegion | us-west-1 | Region for Setup Kits S3 Bucket. Used in S3 URL
-SetupKitsS3PIFileName | PI Server_2018 SP3 Patch 1_.exe | File Name for the PI Server Setup Kit. File name can include numbers, lowercase letters, uppercase letters, underscores (_), and hyphens (-). It cannot start or end with a hyphen (-).
+SetupKitsS3PIFileName | PI-Server_2018-SP3-Patch-1_.exe | File Name for the PI Server Setup Kit. File name can include numbers, lowercase letters, uppercase letters, underscores (_), and hyphens (-). It cannot start or end with a hyphen (-).
 SetupKitsS3PIProductID | d47af9e0-e952-4068-b77b-52e5b4cf03b7 | Product ID for the PI Server Setup Kit. Product ID can include numbers, lowercase letters, uppercase letters,and hyphens (-). It cannot start or end with a hyphen (-). This should not be modified.
-SetupKitsS3VisionFileName | PI Vision_2019 Patch 1_.exe | File Name for the PI Vision Setup Kit. File name can include numbers, lowercase letters, uppercase letters, underscores (_), and hyphens (-). It cannot start or end with a hyphen (-).
+SetupKitsS3VisionFileName | PI-Vision_2019-Patch-1_.exe | File Name for the PI Vision Setup Kit. File name can include numbers, lowercase letters, uppercase letters, underscores (_), and hyphens (-). It cannot start or end with a hyphen (-).
 TestFileName | PI-System-Deployment-Tests.zip | File Name for the test file. This should be the same as the downloaded zip file (ex: *PI-System-Deployment-Tests.zip*). File name can include numbers, lowercase letters, uppercase letters, underscores (_), and hyphens (-). It cannot start or end with a hyphen (-).
 
 ### Step 6: Replace the Temporary PI License with a Full PI License

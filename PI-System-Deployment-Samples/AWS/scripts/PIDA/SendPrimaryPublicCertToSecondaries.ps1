@@ -16,6 +16,8 @@
 # ************************************************************************
 
 param ([String] $primary, [String]$storePath, [String[]]$secondaries)
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 if ((Test-Path '.\Get-RemoteCert.ps1') -eq $false)
 {
 	Write-Error 'missing file: Get-RemoteCert.ps1'

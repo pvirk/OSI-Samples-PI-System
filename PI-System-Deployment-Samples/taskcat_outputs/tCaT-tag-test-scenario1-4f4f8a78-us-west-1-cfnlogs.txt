@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------
+Region: us-west-1
+StackName: tCaT-tag-test-scenario1-4f4f8a78
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [CoreStack].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                 ResourceStatusReason
+--------------------------------  ------------------  --------------------------  --------------------------------  ---------------------------------------------------------------------------------------------
+2020-05-19 02:50:03.732000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-4f4f8a78  The following resource(s) failed to create: [CoreStack].
+2020-05-19 02:50:01.976000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  CoreStack                         S3 error: Access Denied
+                                                                                                                    For more information check http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+2020-05-19 02:50:01.181000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  CoreStack
+2020-05-19 02:49:54.631000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-4f4f8a78  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Monday, 18. May 2020 07:50PM
+-----------------------------------------------------------------------------
+

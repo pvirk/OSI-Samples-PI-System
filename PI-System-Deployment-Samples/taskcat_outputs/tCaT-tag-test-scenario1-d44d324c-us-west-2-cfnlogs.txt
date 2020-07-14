@@ -1,0 +1,821 @@
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [CoreStack].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                 ResourceStatusReason
+--------------------------------  ------------------  --------------------------  --------------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2020-05-22 21:26:33.608000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-d44d324c  The following resource(s) failed to create: [CoreStack].
+2020-05-22 21:26:32.420000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  CoreStack                         Embedded stack arn:aws:cloudformation:us-west-2:977306392285:stack/tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH/ddf4f670-9c65-11ea-8650-02353448ae88 was not successfully created: The following resource(s) failed to create: [RDGWStack, SQLStack].
+2020-05-22 19:53:12.051000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  CoreStack                         Resource creation Initiated
+2020-05-22 19:53:11.362000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  CoreStack
+2020-05-22 19:53:04.714000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-d44d324c  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [RDGWStack, SQLStack].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                                         ResourceStatusReason
+--------------------------------  ------------------  --------------------------  --------------------------------------------------------  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2020-05-22 21:25:46.848000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH  The following resource(s) failed to create: [RDGWStack, SQLStack].
+2020-05-22 21:25:45.790000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  SQLStack                                                  Resource creation cancelled
+2020-05-22 21:25:45.265000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  RDGWStack                                                 Embedded stack arn:aws:cloudformation:us-west-2:977306392285:stack/tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK/a24f2130-9c6b-11ea-b37d-06b8fd1f0384 was not successfully created: The following resource(s) failed to create: [RDGW0WaitCondition, RDGW1WaitCondition].
+2020-05-22 20:34:29.101000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  RDGWStack                                                 Resource creation Initiated
+2020-05-22 20:34:29.051000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  SQLStack                                                  Resource creation Initiated
+2020-05-22 20:34:28.231000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  RDGWStack
+2020-05-22 20:34:28.122000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  SQLStack
+2020-05-22 20:34:24.669000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  ADStack
+2020-05-22 19:58:10.672000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ADStack                                                   Resource creation Initiated
+2020-05-22 19:58:09.671000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  ADStack
+2020-05-22 19:58:06.514000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  PISecurityGroupStack
+2020-05-22 19:57:32.501000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  PISecurityGroupStack                                      Resource creation Initiated
+2020-05-22 19:57:31.779000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  PISecurityGroupStack
+2020-05-22 19:57:28.649000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  CoreSecurityGroupStack
+2020-05-22 19:56:54.689000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  CoreSecurityGroupStack                                    Resource creation Initiated
+2020-05-22 19:56:54.060000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  CoreSecurityGroupStack
+2020-05-22 19:56:51.107000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack  VPCStack
+2020-05-22 19:53:19.050000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  VPCStack                                                  Resource creation Initiated
+2020-05-22 19:53:18.253000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  VPCStack
+2020-05-22 19:53:11.864000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                              ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  -----------------------------------------------------------------------------  ---------------------------
+2020-05-22 20:31:38.439000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2
+2020-05-22 20:31:35.670000+00:00  CREATE_COMPLETE     AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation
+2020-05-22 20:31:35.539000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation                                                      Resource creation Initiated
+2020-05-22 20:31:35.167000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation
+2020-05-22 20:31:31.566000+00:00  CREATE_COMPLETE     AWS::EC2::DHCPOptions                     DHCPOptions
+2020-05-22 20:31:15.750000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                     DHCPOptions                                                                    Resource creation Initiated
+2020-05-22 20:31:15.287000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                     DHCPOptions
+2020-05-22 20:31:12.009000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        DomainController2WaitCondition
+2020-05-22 20:19:18.153000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController2WaitCondition                                                 Resource creation Initiated
+2020-05-22 20:19:17.985000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController2WaitCondition
+2020-05-22 20:19:14.846000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        DomainController2
+2020-05-22 20:19:07.314000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController2                                                              Resource creation Initiated
+2020-05-22 20:19:05.723000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController2
+2020-05-22 20:19:02.178000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        DomainController1WaitCondition
+2020-05-22 20:01:06.134000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController1WaitCondition                                                 Resource creation Initiated
+2020-05-22 20:01:05.988000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController1WaitCondition
+2020-05-22 20:01:01.934000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        DomainController1
+2020-05-22 20:00:46.239000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController1                                                              Resource creation Initiated
+2020-05-22 20:00:44.788000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController1
+2020-05-22 20:00:40.495000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 ADServerProfile
+2020-05-22 19:58:39.922000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 ADServerProfile                                                                Resource creation Initiated
+2020-05-22 19:58:39.608000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 ADServerProfile
+2020-05-22 19:58:35.994000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            ADServerRole
+2020-05-22 19:58:20.070000+00:00  CREATE_COMPLETE     AWS::SSM::Parameter                       ADPassword
+2020-05-22 19:58:19.343000+00:00  CREATE_IN_PROGRESS  AWS::SSM::Parameter                       ADPassword                                                                     Resource creation Initiated
+2020-05-22 19:58:18.696000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            ADServerRole                                                                   Resource creation Initiated
+2020-05-22 19:58:18.352000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            ADServerRole
+2020-05-22 19:58:17.897000+00:00  CREATE_IN_PROGRESS  AWS::SSM::Parameter                       ADPassword
+2020-05-22 19:58:16.878000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle
+2020-05-22 19:58:16.750000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle                                                    Resource creation Initiated
+2020-05-22 19:58:16.673000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle
+2020-05-22 19:58:16.561000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle                                                    Resource creation Initiated
+2020-05-22 19:58:16.546000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle
+2020-05-22 19:58:16.357000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle
+2020-05-22 19:58:10.483000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                    LogicalResourceId                                                                              ResourceStatusReason
+--------------------------------  ------------------  ------------------------------  ---------------------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:57:27.061000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931
+2020-05-22 19:57:24.786000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DCIngressSG
+2020-05-22 19:57:20.622000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCIngressSG                                                                                    Resource creation Initiated
+2020-05-22 19:57:16.796000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  FileCopySG
+2020-05-22 19:57:16.045000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  FileCopySG                                                                                     Resource creation Initiated
+2020-05-22 19:57:15.905000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  FileCopySG
+2020-05-22 19:57:15.706000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCIngressSG
+2020-05-22 19:57:13.721000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DomainMemberSG
+2020-05-22 19:57:13.070000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLIngressSG
+2020-05-22 19:57:12.233000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DomainMemberSG                                                                                 Resource creation Initiated
+2020-05-22 19:57:12+00:00         CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLIngressSG                                                                                   Resource creation Initiated
+2020-05-22 19:57:07.980000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  DCSGIngress
+2020-05-22 19:57:07.606000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  SQLSGIngress
+2020-05-22 19:57:07.420000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  DCSGIngress                                                                                    Resource creation Initiated
+2020-05-22 19:57:07.359000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DomainMemberSG
+2020-05-22 19:57:07.285000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  DCSGIngress
+2020-05-22 19:57:07.049000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLIngressSG
+2020-05-22 19:57:06.861000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  SQLSGIngress                                                                                   Resource creation Initiated
+2020-05-22 19:57:06.718000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  SQLSGIngress
+2020-05-22 19:57:05.369000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DCSG
+2020-05-22 19:57:04.941000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLSG
+2020-05-22 19:57:04.796000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLClientSG
+2020-05-22 19:57:04.197000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLSG                                                                                          Resource creation Initiated
+2020-05-22 19:57:04.186000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCSG                                                                                           Resource creation Initiated
+2020-05-22 19:57:03.858000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLClientSG                                                                                    Resource creation Initiated
+2020-05-22 19:56:59.439000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCSG
+2020-05-22 19:56:59.268000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLSG
+2020-05-22 19:56:59.062000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLClientSG
+2020-05-22 19:56:54.549000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                    LogicalResourceId                                                                           ResourceStatusReason
+--------------------------------  ------------------  ------------------------------  ------------------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:57:54.456000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG
+2020-05-22 19:57:52.593000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngress
+2020-05-22 19:57:52.446000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1
+2020-05-22 19:57:52.442000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGRPC
+2020-05-22 19:57:52.304000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGICMP
+2020-05-22 19:57:52.273000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2
+2020-05-22 19:57:51.992000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngress                                                                          Resource creation Initiated
+2020-05-22 19:57:51.846000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGRPC                                                                              Resource creation Initiated
+2020-05-22 19:57:51.838000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngress
+2020-05-22 19:57:51.807000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1                                                                       Resource creation Initiated
+2020-05-22 19:57:51.716000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGICMP                                                                             Resource creation Initiated
+2020-05-22 19:57:51.703000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGRPC
+2020-05-22 19:57:51.674000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2                                                                       Resource creation Initiated
+2020-05-22 19:57:51.662000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1
+2020-05-22 19:57:51.566000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGICMP
+2020-05-22 19:57:51.542000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2
+2020-05-22 19:57:49.831000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         PISystemsSG
+2020-05-22 19:57:48.878000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PISystemsSG                                                                                 Resource creation Initiated
+2020-05-22 19:57:44.053000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PISystemsSG
+2020-05-22 19:57:42.385000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         PIClientSG
+2020-05-22 19:57:41.589000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PIClientSG                                                                                  Resource creation Initiated
+2020-05-22 19:57:36.715000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PIClientSG
+2020-05-22 19:57:32.389000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [RDGW0WaitCondition, RDGW1WaitCondition].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                                 ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  --------------------------------------------------------------------------------  -------------------------------------------------------------------------------------
+2020-05-22 21:24:24.725000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK  The following resource(s) failed to create: [RDGW0WaitCondition, RDGW1WaitCondition].
+2020-05-22 21:24:23.374000+00:00  CREATE_FAILED       AWS::CloudFormation::WaitCondition        RDGW0WaitCondition                                                                Resource creation cancelled
+2020-05-22 21:24:22.571000+00:00  CREATE_FAILED       AWS::CloudFormation::WaitCondition        RDGW1WaitCondition                                                                WaitCondition timed out. Received 0 conditions when expecting 2
+2020-05-22 20:39:11.890000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                EC20VA0Binaries
+2020-05-22 20:39:02.784000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                EC21VA0Binaries
+2020-05-22 20:38:56.526000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC20VA0Binaries                                                                   Resource creation Initiated
+2020-05-22 20:38:47.418000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC21VA0Binaries                                                                   Resource creation Initiated
+2020-05-22 20:38:41.087000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC20VA0Binaries
+2020-05-22 20:38:38.010000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          EC20VolumeData0Binaries
+2020-05-22 20:38:36.664000+00:00  CREATE_COMPLETE     AWS::EC2::EIPAssociation                  EC20EIP0
+2020-05-22 20:38:31.942000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC21VA0Binaries
+2020-05-22 20:38:28.785000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          EC21VolumeData0Binaries
+2020-05-22 20:38:27.946000+00:00  CREATE_COMPLETE     AWS::EC2::EIPAssociation                  EC21EIP1
+2020-05-22 20:38:22.219000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC20VolumeData0Binaries                                                           Resource creation Initiated
+2020-05-22 20:38:21.737000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC20VolumeData0Binaries
+2020-05-22 20:38:21.186000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC20EIP0                                                                          Resource creation Initiated
+2020-05-22 20:38:21.011000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW0WaitCondition                                                                Resource creation Initiated
+2020-05-22 20:38:20.867000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW0WaitCondition
+2020-05-22 20:38:20.637000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1
+2020-05-22 20:38:20.131000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1                                                      Resource creation Initiated
+2020-05-22 20:38:20.038000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC20EIP0
+2020-05-22 20:38:20.010000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1
+2020-05-22 20:38:16.878000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        EC20
+2020-05-22 20:38:13.109000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC21VolumeData0Binaries                                                           Resource creation Initiated
+2020-05-22 20:38:12.945000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2
+2020-05-22 20:38:12.639000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC21VolumeData0Binaries
+2020-05-22 20:38:12.522000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC21EIP1                                                                          Resource creation Initiated
+2020-05-22 20:38:12.220000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2                                                      Resource creation Initiated
+2020-05-22 20:38:12.109000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2
+2020-05-22 20:38:11.672000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC21EIP1
+2020-05-22 20:38:11.267000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW1WaitCondition                                                                Resource creation Initiated
+2020-05-22 20:38:11.136000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW1WaitCondition
+2020-05-22 20:38:08.327000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        EC21
+2020-05-22 20:38:01.237000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC20                                                                              Resource creation Initiated
+2020-05-22 20:38:00.780000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC21                                                                              Resource creation Initiated
+2020-05-22 20:37:59.805000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC20
+2020-05-22 20:37:59.386000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC21
+2020-05-22 20:37:55.573000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile
+2020-05-22 20:35:54.983000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile                                                            Resource creation Initiated
+2020-05-22 20:35:54.656000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile
+2020-05-22 20:35:50.879000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            EC2Role
+2020-05-22 20:34:51.789000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                             EIP1
+2020-05-22 20:34:51.379000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                             EIP0
+2020-05-22 20:34:45.999000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            AllowPSIngressSG
+2020-05-22 20:34:45.941000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG
+2020-05-22 20:34:45.400000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowPSIngressSG                                                                  Resource creation Initiated
+2020-05-22 20:34:45.286000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG                                                                 Resource creation Initiated
+2020-05-22 20:34:45.256000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowPSIngressSG
+2020-05-22 20:34:45.172000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG
+2020-05-22 20:34:41.792000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup                   RDGWSG
+2020-05-22 20:34:40.534000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                   RDGWSG                                                                            Resource creation Initiated
+2020-05-22 20:34:36.622000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            EC2Role                                                                           Resource creation Initiated
+2020-05-22 20:34:36.197000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            EC2Role
+2020-05-22 20:34:36.073000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP1                                                                              Resource creation Initiated
+2020-05-22 20:34:35.728000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP1
+2020-05-22 20:34:35.573000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP0                                                                              Resource creation Initiated
+2020-05-22 20:34:35.565000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                   RDGWSG
+2020-05-22 20:34:35.198000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP0
+2020-05-22 20:34:34.612000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle
+2020-05-22 20:34:34.500000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle                                                                   Resource creation Initiated
+2020-05-22 20:34:34.476000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle
+2020-05-22 20:34:34.342000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle                                                                   Resource creation Initiated
+2020-05-22 20:34:34.198000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle
+2020-05-22 20:34:34.120000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle
+2020-05-22 20:34:28.963000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-SQLStack-4R2YVNVFM8L2
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                               ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  ------------------------------------------------------------------------------  ---------------------------
+2020-05-22 21:09:37.162000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment
+2020-05-22 21:09:36.859000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment
+2020-05-22 21:09:36.737000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment
+2020-05-22 21:09:21.828000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:21.518000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:21.247000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:06.496000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment
+2020-05-22 21:09:06.152000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment
+2020-05-22 21:09:05.809000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment
+2020-05-22 21:09:04.616000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode1WaitCondition                                                           Resource creation Initiated
+2020-05-22 21:09:04.496000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode1WaitCondition
+2020-05-22 21:09:02.651000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume2
+2020-05-22 21:09:02.331000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume1
+2020-05-22 21:09:02.205000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume3
+2020-05-22 21:08:46.810000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume2                                                                 Resource creation Initiated
+2020-05-22 21:08:46.466000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume1                                                                 Resource creation Initiated
+2020-05-22 21:08:46.424000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume3                                                                 Resource creation Initiated
+2020-05-22 21:08:46.265000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume2
+2020-05-22 21:08:46.016000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume1
+2020-05-22 21:08:45.968000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume3
+2020-05-22 21:08:42.350000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLNode1
+2020-05-22 21:08:26.727000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode1                                                                        Resource creation Initiated
+2020-05-22 21:08:24.933000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode1
+2020-05-22 21:08:21.249000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition
+2020-05-22 20:46:04.239000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition
+2020-05-22 20:39:09.904000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment
+2020-05-22 20:39:09.702000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment
+2020-05-22 20:39:09.651000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment
+2020-05-22 20:38:54.548000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:54.361000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:54.291000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:39.189000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment
+2020-05-22 20:38:38.960000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment
+2020-05-22 20:38:38.854000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment
+2020-05-22 20:38:35.917000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume1
+2020-05-22 20:38:35.573000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume3
+2020-05-22 20:38:35.559000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume2
+2020-05-22 20:38:20.236000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume1                                                                 Resource creation Initiated
+2020-05-22 20:38:19.913000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume3                                                                 Resource creation Initiated
+2020-05-22 20:38:19.853000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume2                                                                 Resource creation Initiated
+2020-05-22 20:38:19.734000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume1
+2020-05-22 20:38:19.709000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition                                                           Resource creation Initiated
+2020-05-22 20:38:19.583000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition
+2020-05-22 20:38:19.442000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume3
+2020-05-22 20:38:19.361000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume2
+2020-05-22 20:38:15.898000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLNode0
+2020-05-22 20:38:11.497000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition                                                      Resource creation Initiated
+2020-05-22 20:38:11.371000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition
+2020-05-22 20:38:07.444000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLFileServer
+2020-05-22 20:38:00.017000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode0                                                                        Resource creation Initiated
+2020-05-22 20:37:59.956000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLFileServer                                                                   Resource creation Initiated
+2020-05-22 20:37:58.626000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode0
+2020-05-22 20:37:58.526000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLFileServer
+2020-05-22 20:37:54.184000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 SQLProfile
+2020-05-22 20:35:53.613000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 SQLProfile                                                                      Resource creation Initiated
+2020-05-22 20:35:52.997000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 SQLProfile
+2020-05-22 20:35:49.594000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            SQLRole
+2020-05-22 20:34:35.831000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            SQLRole                                                                         Resource creation Initiated
+2020-05-22 20:34:35.455000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            SQLRole
+2020-05-22 20:34:34.363000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle
+2020-05-22 20:34:34.278000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle
+2020-05-22 20:34:34.253000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle
+2020-05-22 20:34:34.235000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle                                                              Resource creation Initiated
+2020-05-22 20:34:34.154000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle                                                         Resource creation Initiated
+2020-05-22 20:34:34.141000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle                                                              Resource creation Initiated
+2020-05-22 20:34:34.028000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle
+2020-05-22 20:34:33.939000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle
+2020-05-22 20:34:33.876000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle
+2020-05-22 20:34:28.837000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-SQLStack-4R2YVNVFM8L2  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                           LogicalResourceId                                                               ResourceStatusReason
+--------------------------------  ------------------  -------------------------------------  ------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:56:27.661000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack             tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM
+2020-05-22 19:56:25.351000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        BackendRoute1
+2020-05-22 19:56:09.950000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute1                                                                   Resource creation Initiated
+2020-05-22 19:56:09.759000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        BackendRoute0
+2020-05-22 19:56:09.339000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute1
+2020-05-22 19:56:07.461000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway1
+2020-05-22 19:55:54.446000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute0                                                                   Resource creation Initiated
+2020-05-22 19:55:53.872000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute0
+2020-05-22 19:55:51.762000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway0
+2020-05-22 19:54:19.647000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1                                                                     Resource creation Initiated
+2020-05-22 19:54:19.170000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway0                                                                     Resource creation Initiated
+2020-05-22 19:54:18.632000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1
+2020-05-22 19:54:18.432000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway0
+2020-05-22 19:54:17.658000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink
+2020-05-22 19:54:17.526000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink
+2020-05-22 19:54:17.402000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink
+2020-05-22 19:54:17.392000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink
+2020-05-22 19:54:16.604000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NATGateway0EIP
+2020-05-22 19:54:16.477000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NATGateway1EIP
+2020-05-22 19:54:16.106000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        FrontendRoute
+2020-05-22 19:54:02.262000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink                                                         Resource creation Initiated
+2020-05-22 19:54:02.052000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink                                                        Resource creation Initiated
+2020-05-22 19:54:02.017000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink                                                        Resource creation Initiated
+2020-05-22 19:54:02.010000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink                                                         Resource creation Initiated
+2020-05-22 19:54:01.371000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink
+2020-05-22 19:54:01.307000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink
+2020-05-22 19:54:01.237000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink
+2020-05-22 19:54:01.141000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink
+2020-05-22 19:54:00.812000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway0EIP                                                                  Resource creation Initiated
+2020-05-22 19:54:00.761000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        FrontendRoute                                                                   Resource creation Initiated
+2020-05-22 19:54:00.490000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway1EIP                                                                  Resource creation Initiated
+2020-05-22 19:54:00.350000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway0EIP
+2020-05-22 19:54:00.283000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        FrontendRoute
+2020-05-22 19:54:00.143000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway1EIP
+2020-05-22 19:53:59.216000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       BackendSubnet1
+2020-05-22 19:53:59.208000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       BackendSubnet0
+2020-05-22 19:53:59.145000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       FrontendSubnet0
+2020-05-22 19:53:59.125000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       FrontendSubnet1
+2020-05-22 19:53:58.327000+00:00  CREATE_COMPLETE     AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment
+2020-05-22 19:53:43.932000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   BackendRouteTable1
+2020-05-22 19:53:43.819000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   FrontendRouteTable
+2020-05-22 19:53:43.738000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   BackendRouteTable0
+2020-05-22 19:53:43.191000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet1                                                                  Resource creation Initiated
+2020-05-22 19:53:43.187000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet1                                                                 Resource creation Initiated
+2020-05-22 19:53:43.102000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet0                                                                 Resource creation Initiated
+2020-05-22 19:53:43.025000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet0                                                                  Resource creation Initiated
+2020-05-22 19:53:43.009000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable1                                                              Resource creation Initiated
+2020-05-22 19:53:42.992000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment                                                       Resource creation Initiated
+2020-05-22 19:53:42.932000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   FrontendRouteTable                                                              Resource creation Initiated
+2020-05-22 19:53:42.797000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet1
+2020-05-22 19:53:42.735000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet1
+2020-05-22 19:53:42.712000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable0                                                              Resource creation Initiated
+2020-05-22 19:53:42.642000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet0
+2020-05-22 19:53:42.634000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable1
+2020-05-22 19:53:42.631000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   FrontendRouteTable
+2020-05-22 19:53:42.561000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet0
+2020-05-22 19:53:42.541000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment
+2020-05-22 19:53:42.364000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable0
+2020-05-22 19:53:40.527000+00:00  CREATE_COMPLETE     AWS::EC2::VPC                          VPC
+2020-05-22 19:53:39.788000+00:00  CREATE_COMPLETE     AWS::EC2::InternetGateway              InternetGateway
+2020-05-22 19:53:23.965000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC                                                                             Resource creation Initiated
+2020-05-22 19:53:23.766000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway                                                                 Resource creation Initiated
+2020-05-22 19:53:23.474000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway
+2020-05-22 19:53:23.470000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC
+2020-05-22 19:53:18.910000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack             tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                              ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  -----------------------------------------------------------------------------  ---------------------------
+2020-05-22 20:31:38.439000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2
+2020-05-22 20:31:35.670000+00:00  CREATE_COMPLETE     AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation
+2020-05-22 20:31:35.539000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation                                                      Resource creation Initiated
+2020-05-22 20:31:35.167000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCDHCPOptionsAssociation       VPCDHCPOptionsAssociation
+2020-05-22 20:31:31.566000+00:00  CREATE_COMPLETE     AWS::EC2::DHCPOptions                     DHCPOptions
+2020-05-22 20:31:15.750000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                     DHCPOptions                                                                    Resource creation Initiated
+2020-05-22 20:31:15.287000+00:00  CREATE_IN_PROGRESS  AWS::EC2::DHCPOptions                     DHCPOptions
+2020-05-22 20:31:12.009000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        DomainController2WaitCondition
+2020-05-22 20:19:18.153000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController2WaitCondition                                                 Resource creation Initiated
+2020-05-22 20:19:17.985000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController2WaitCondition
+2020-05-22 20:19:14.846000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        DomainController2
+2020-05-22 20:19:07.314000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController2                                                              Resource creation Initiated
+2020-05-22 20:19:05.723000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController2
+2020-05-22 20:19:02.178000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        DomainController1WaitCondition
+2020-05-22 20:01:06.134000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController1WaitCondition                                                 Resource creation Initiated
+2020-05-22 20:01:05.988000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        DomainController1WaitCondition
+2020-05-22 20:01:01.934000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        DomainController1
+2020-05-22 20:00:46.239000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController1                                                              Resource creation Initiated
+2020-05-22 20:00:44.788000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        DomainController1
+2020-05-22 20:00:40.495000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 ADServerProfile
+2020-05-22 19:58:39.922000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 ADServerProfile                                                                Resource creation Initiated
+2020-05-22 19:58:39.608000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 ADServerProfile
+2020-05-22 19:58:35.994000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            ADServerRole
+2020-05-22 19:58:20.070000+00:00  CREATE_COMPLETE     AWS::SSM::Parameter                       ADPassword
+2020-05-22 19:58:19.343000+00:00  CREATE_IN_PROGRESS  AWS::SSM::Parameter                       ADPassword                                                                     Resource creation Initiated
+2020-05-22 19:58:18.696000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            ADServerRole                                                                   Resource creation Initiated
+2020-05-22 19:58:18.352000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            ADServerRole
+2020-05-22 19:58:17.897000+00:00  CREATE_IN_PROGRESS  AWS::SSM::Parameter                       ADPassword
+2020-05-22 19:58:16.878000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle
+2020-05-22 19:58:16.750000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle                                                    Resource creation Initiated
+2020-05-22 19:58:16.673000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle
+2020-05-22 19:58:16.561000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle                                                    Resource creation Initiated
+2020-05-22 19:58:16.546000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController2WaitHandle
+2020-05-22 19:58:16.357000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  DomainController1WaitHandle
+2020-05-22 19:58:10.483000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-ADStack-F6F1NC4LFSK2  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                    LogicalResourceId                                                                              ResourceStatusReason
+--------------------------------  ------------------  ------------------------------  ---------------------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:57:27.061000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931
+2020-05-22 19:57:24.786000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DCIngressSG
+2020-05-22 19:57:20.622000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCIngressSG                                                                                    Resource creation Initiated
+2020-05-22 19:57:16.796000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  FileCopySG
+2020-05-22 19:57:16.045000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  FileCopySG                                                                                     Resource creation Initiated
+2020-05-22 19:57:15.905000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  FileCopySG
+2020-05-22 19:57:15.706000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCIngressSG
+2020-05-22 19:57:13.721000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DomainMemberSG
+2020-05-22 19:57:13.070000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLIngressSG
+2020-05-22 19:57:12.233000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DomainMemberSG                                                                                 Resource creation Initiated
+2020-05-22 19:57:12+00:00         CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLIngressSG                                                                                   Resource creation Initiated
+2020-05-22 19:57:07.980000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  DCSGIngress
+2020-05-22 19:57:07.606000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  SQLSGIngress
+2020-05-22 19:57:07.420000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  DCSGIngress                                                                                    Resource creation Initiated
+2020-05-22 19:57:07.359000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DomainMemberSG
+2020-05-22 19:57:07.285000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  DCSGIngress
+2020-05-22 19:57:07.049000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLIngressSG
+2020-05-22 19:57:06.861000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  SQLSGIngress                                                                                   Resource creation Initiated
+2020-05-22 19:57:06.718000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  SQLSGIngress
+2020-05-22 19:57:05.369000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         DCSG
+2020-05-22 19:57:04.941000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLSG
+2020-05-22 19:57:04.796000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         SQLClientSG
+2020-05-22 19:57:04.197000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLSG                                                                                          Resource creation Initiated
+2020-05-22 19:57:04.186000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCSG                                                                                           Resource creation Initiated
+2020-05-22 19:57:03.858000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLClientSG                                                                                    Resource creation Initiated
+2020-05-22 19:56:59.439000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         DCSG
+2020-05-22 19:56:59.268000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLSG
+2020-05-22 19:56:59.062000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         SQLClientSG
+2020-05-22 19:56:54.549000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-CoreSecurityGroupStack-1S4QDPQZ4Y931  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                    LogicalResourceId                                                                           ResourceStatusReason
+--------------------------------  ------------------  ------------------------------  ------------------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:57:54.456000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG
+2020-05-22 19:57:52.593000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngress
+2020-05-22 19:57:52.446000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1
+2020-05-22 19:57:52.442000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGRPC
+2020-05-22 19:57:52.304000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGICMP
+2020-05-22 19:57:52.273000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2
+2020-05-22 19:57:51.992000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngress                                                                          Resource creation Initiated
+2020-05-22 19:57:51.846000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGRPC                                                                              Resource creation Initiated
+2020-05-22 19:57:51.838000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngress
+2020-05-22 19:57:51.807000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1                                                                       Resource creation Initiated
+2020-05-22 19:57:51.716000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGICMP                                                                             Resource creation Initiated
+2020-05-22 19:57:51.703000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGRPC
+2020-05-22 19:57:51.674000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2                                                                       Resource creation Initiated
+2020-05-22 19:57:51.662000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB1
+2020-05-22 19:57:51.566000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGICMP
+2020-05-22 19:57:51.542000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress  PISystemsSGIngressLB2
+2020-05-22 19:57:49.831000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         PISystemsSG
+2020-05-22 19:57:48.878000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PISystemsSG                                                                                 Resource creation Initiated
+2020-05-22 19:57:44.053000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PISystemsSG
+2020-05-22 19:57:42.385000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup         PIClientSG
+2020-05-22 19:57:41.589000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PIClientSG                                                                                  Resource creation Initiated
+2020-05-22 19:57:36.715000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup         PIClientSG
+2020-05-22 19:57:32.389000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack      tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-PISecurityGroupStack-1XDZIWQ9JJJG  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [RDGW0WaitCondition, RDGW1WaitCondition].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                                 ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  --------------------------------------------------------------------------------  -------------------------------------------------------------------------------------
+2020-05-22 21:24:24.725000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK  The following resource(s) failed to create: [RDGW0WaitCondition, RDGW1WaitCondition].
+2020-05-22 21:24:23.374000+00:00  CREATE_FAILED       AWS::CloudFormation::WaitCondition        RDGW0WaitCondition                                                                Resource creation cancelled
+2020-05-22 21:24:22.571000+00:00  CREATE_FAILED       AWS::CloudFormation::WaitCondition        RDGW1WaitCondition                                                                WaitCondition timed out. Received 0 conditions when expecting 2
+2020-05-22 20:39:11.890000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                EC20VA0Binaries
+2020-05-22 20:39:02.784000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                EC21VA0Binaries
+2020-05-22 20:38:56.526000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC20VA0Binaries                                                                   Resource creation Initiated
+2020-05-22 20:38:47.418000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC21VA0Binaries                                                                   Resource creation Initiated
+2020-05-22 20:38:41.087000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC20VA0Binaries
+2020-05-22 20:38:38.010000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          EC20VolumeData0Binaries
+2020-05-22 20:38:36.664000+00:00  CREATE_COMPLETE     AWS::EC2::EIPAssociation                  EC20EIP0
+2020-05-22 20:38:31.942000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                EC21VA0Binaries
+2020-05-22 20:38:28.785000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          EC21VolumeData0Binaries
+2020-05-22 20:38:27.946000+00:00  CREATE_COMPLETE     AWS::EC2::EIPAssociation                  EC21EIP1
+2020-05-22 20:38:22.219000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC20VolumeData0Binaries                                                           Resource creation Initiated
+2020-05-22 20:38:21.737000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC20VolumeData0Binaries
+2020-05-22 20:38:21.186000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC20EIP0                                                                          Resource creation Initiated
+2020-05-22 20:38:21.011000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW0WaitCondition                                                                Resource creation Initiated
+2020-05-22 20:38:20.867000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW0WaitCondition
+2020-05-22 20:38:20.637000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1
+2020-05-22 20:38:20.131000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1                                                      Resource creation Initiated
+2020-05-22 20:38:20.038000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC20EIP0
+2020-05-22 20:38:20.010000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance1
+2020-05-22 20:38:16.878000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        EC20
+2020-05-22 20:38:13.109000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC21VolumeData0Binaries                                                           Resource creation Initiated
+2020-05-22 20:38:12.945000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2
+2020-05-22 20:38:12.639000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          EC21VolumeData0Binaries
+2020-05-22 20:38:12.522000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC21EIP1                                                                          Resource creation Initiated
+2020-05-22 20:38:12.220000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2                                                      Resource creation Initiated
+2020-05-22 20:38:12.109000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            SGIngressForAFLBForInstance2
+2020-05-22 20:38:11.672000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIPAssociation                  EC21EIP1
+2020-05-22 20:38:11.267000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW1WaitCondition                                                                Resource creation Initiated
+2020-05-22 20:38:11.136000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        RDGW1WaitCondition
+2020-05-22 20:38:08.327000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        EC21
+2020-05-22 20:38:01.237000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC20                                                                              Resource creation Initiated
+2020-05-22 20:38:00.780000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC21                                                                              Resource creation Initiated
+2020-05-22 20:37:59.805000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC20
+2020-05-22 20:37:59.386000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        EC21
+2020-05-22 20:37:55.573000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile
+2020-05-22 20:35:54.983000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile                                                            Resource creation Initiated
+2020-05-22 20:35:54.656000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 EC2RoleInstanceProfile
+2020-05-22 20:35:50.879000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            EC2Role
+2020-05-22 20:34:51.789000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                             EIP1
+2020-05-22 20:34:51.379000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                             EIP0
+2020-05-22 20:34:45.999000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            AllowPSIngressSG
+2020-05-22 20:34:45.941000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG
+2020-05-22 20:34:45.400000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowPSIngressSG                                                                  Resource creation Initiated
+2020-05-22 20:34:45.286000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG                                                                 Resource creation Initiated
+2020-05-22 20:34:45.256000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowPSIngressSG
+2020-05-22 20:34:45.172000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroupIngress            AllowRDPIngressSG
+2020-05-22 20:34:41.792000+00:00  CREATE_COMPLETE     AWS::EC2::SecurityGroup                   RDGWSG
+2020-05-22 20:34:40.534000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                   RDGWSG                                                                            Resource creation Initiated
+2020-05-22 20:34:36.622000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            EC2Role                                                                           Resource creation Initiated
+2020-05-22 20:34:36.197000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            EC2Role
+2020-05-22 20:34:36.073000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP1                                                                              Resource creation Initiated
+2020-05-22 20:34:35.728000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP1
+2020-05-22 20:34:35.573000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP0                                                                              Resource creation Initiated
+2020-05-22 20:34:35.565000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SecurityGroup                   RDGWSG
+2020-05-22 20:34:35.198000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                             EIP0
+2020-05-22 20:34:34.612000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle
+2020-05-22 20:34:34.500000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle                                                                   Resource creation Initiated
+2020-05-22 20:34:34.476000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle
+2020-05-22 20:34:34.342000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle                                                                   Resource creation Initiated
+2020-05-22 20:34:34.198000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW0WaitHandle
+2020-05-22 20:34:34.120000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  RDGW1WaitHandle
+2020-05-22 20:34:28.963000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-RDGWStack-1NPBMOHT0FFCK  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-SQLStack-4R2YVNVFM8L2
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                              LogicalResourceId                                                               ResourceStatusReason
+--------------------------------  ------------------  ----------------------------------------  ------------------------------------------------------------------------------  ---------------------------
+2020-05-22 21:09:37.162000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment
+2020-05-22 21:09:36.859000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment
+2020-05-22 21:09:36.737000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment
+2020-05-22 21:09:21.828000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:21.518000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:21.247000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment                                                       Resource creation Initiated
+2020-05-22 21:09:06.496000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume2Attachment
+2020-05-22 21:09:06.152000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume1Attachment
+2020-05-22 21:09:05.809000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode1Volume3Attachment
+2020-05-22 21:09:04.616000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode1WaitCondition                                                           Resource creation Initiated
+2020-05-22 21:09:04.496000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode1WaitCondition
+2020-05-22 21:09:02.651000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume2
+2020-05-22 21:09:02.331000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume1
+2020-05-22 21:09:02.205000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode1Volume3
+2020-05-22 21:08:46.810000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume2                                                                 Resource creation Initiated
+2020-05-22 21:08:46.466000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume1                                                                 Resource creation Initiated
+2020-05-22 21:08:46.424000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume3                                                                 Resource creation Initiated
+2020-05-22 21:08:46.265000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume2
+2020-05-22 21:08:46.016000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume1
+2020-05-22 21:08:45.968000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode1Volume3
+2020-05-22 21:08:42.350000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLNode1
+2020-05-22 21:08:26.727000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode1                                                                        Resource creation Initiated
+2020-05-22 21:08:24.933000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode1
+2020-05-22 21:08:21.249000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition
+2020-05-22 20:46:04.239000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition
+2020-05-22 20:39:09.904000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment
+2020-05-22 20:39:09.702000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment
+2020-05-22 20:39:09.651000+00:00  CREATE_COMPLETE     AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment
+2020-05-22 20:38:54.548000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:54.361000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:54.291000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment                                                       Resource creation Initiated
+2020-05-22 20:38:39.189000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume3Attachment
+2020-05-22 20:38:38.960000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume1Attachment
+2020-05-22 20:38:38.854000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VolumeAttachment                SQLNode0Volume2Attachment
+2020-05-22 20:38:35.917000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume1
+2020-05-22 20:38:35.573000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume3
+2020-05-22 20:38:35.559000+00:00  CREATE_COMPLETE     AWS::EC2::Volume                          SQLNode0Volume2
+2020-05-22 20:38:20.236000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume1                                                                 Resource creation Initiated
+2020-05-22 20:38:19.913000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume3                                                                 Resource creation Initiated
+2020-05-22 20:38:19.853000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume2                                                                 Resource creation Initiated
+2020-05-22 20:38:19.734000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume1
+2020-05-22 20:38:19.709000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition                                                           Resource creation Initiated
+2020-05-22 20:38:19.583000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLNode0WaitCondition
+2020-05-22 20:38:19.442000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume3
+2020-05-22 20:38:19.361000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Volume                          SQLNode0Volume2
+2020-05-22 20:38:15.898000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLNode0
+2020-05-22 20:38:11.497000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition                                                      Resource creation Initiated
+2020-05-22 20:38:11.371000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitCondition        SQLFileServerWaitCondition
+2020-05-22 20:38:07.444000+00:00  CREATE_COMPLETE     AWS::EC2::Instance                        SQLFileServer
+2020-05-22 20:38:00.017000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode0                                                                        Resource creation Initiated
+2020-05-22 20:37:59.956000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLFileServer                                                                   Resource creation Initiated
+2020-05-22 20:37:58.626000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLNode0
+2020-05-22 20:37:58.526000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Instance                        SQLFileServer
+2020-05-22 20:37:54.184000+00:00  CREATE_COMPLETE     AWS::IAM::InstanceProfile                 SQLProfile
+2020-05-22 20:35:53.613000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 SQLProfile                                                                      Resource creation Initiated
+2020-05-22 20:35:52.997000+00:00  CREATE_IN_PROGRESS  AWS::IAM::InstanceProfile                 SQLProfile
+2020-05-22 20:35:49.594000+00:00  CREATE_COMPLETE     AWS::IAM::Role                            SQLRole
+2020-05-22 20:34:35.831000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            SQLRole                                                                         Resource creation Initiated
+2020-05-22 20:34:35.455000+00:00  CREATE_IN_PROGRESS  AWS::IAM::Role                            SQLRole
+2020-05-22 20:34:34.363000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle
+2020-05-22 20:34:34.278000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle
+2020-05-22 20:34:34.253000+00:00  CREATE_COMPLETE     AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle
+2020-05-22 20:34:34.235000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle                                                              Resource creation Initiated
+2020-05-22 20:34:34.154000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle                                                         Resource creation Initiated
+2020-05-22 20:34:34.141000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle                                                              Resource creation Initiated
+2020-05-22 20:34:34.028000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode1WaitHandle
+2020-05-22 20:34:33.939000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLNode0WaitHandle
+2020-05-22 20:34:33.876000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::WaitConditionHandle  SQLFileServerWaitHandle
+2020-05-22 20:34:28.837000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack                tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-SQLStack-4R2YVNVFM8L2  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM
+*****************************************************************************
+ResourceStatusReason:  
+Stack launch was successful
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                           LogicalResourceId                                                               ResourceStatusReason
+--------------------------------  ------------------  -------------------------------------  ------------------------------------------------------------------------------  ---------------------------
+2020-05-22 19:56:27.661000+00:00  CREATE_COMPLETE     AWS::CloudFormation::Stack             tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM
+2020-05-22 19:56:25.351000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        BackendRoute1
+2020-05-22 19:56:09.950000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute1                                                                   Resource creation Initiated
+2020-05-22 19:56:09.759000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        BackendRoute0
+2020-05-22 19:56:09.339000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute1
+2020-05-22 19:56:07.461000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway1
+2020-05-22 19:55:54.446000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute0                                                                   Resource creation Initiated
+2020-05-22 19:55:53.872000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        BackendRoute0
+2020-05-22 19:55:51.762000+00:00  CREATE_COMPLETE     AWS::EC2::NatGateway                   NATGateway0
+2020-05-22 19:54:19.647000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1                                                                     Resource creation Initiated
+2020-05-22 19:54:19.170000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway0                                                                     Resource creation Initiated
+2020-05-22 19:54:18.632000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway1
+2020-05-22 19:54:18.432000+00:00  CREATE_IN_PROGRESS  AWS::EC2::NatGateway                   NATGateway0
+2020-05-22 19:54:17.658000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink
+2020-05-22 19:54:17.526000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink
+2020-05-22 19:54:17.402000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink
+2020-05-22 19:54:17.392000+00:00  CREATE_COMPLETE     AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink
+2020-05-22 19:54:16.604000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NATGateway0EIP
+2020-05-22 19:54:16.477000+00:00  CREATE_COMPLETE     AWS::EC2::EIP                          NATGateway1EIP
+2020-05-22 19:54:16.106000+00:00  CREATE_COMPLETE     AWS::EC2::Route                        FrontendRoute
+2020-05-22 19:54:02.262000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink                                                         Resource creation Initiated
+2020-05-22 19:54:02.052000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink                                                        Resource creation Initiated
+2020-05-22 19:54:02.017000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink                                                        Resource creation Initiated
+2020-05-22 19:54:02.010000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink                                                         Resource creation Initiated
+2020-05-22 19:54:01.371000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet1RouteLink
+2020-05-22 19:54:01.307000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet0RouteLink
+2020-05-22 19:54:01.237000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  BackendSubnet0RouteLink
+2020-05-22 19:54:01.141000+00:00  CREATE_IN_PROGRESS  AWS::EC2::SubnetRouteTableAssociation  FrontendSubnet1RouteLink
+2020-05-22 19:54:00.812000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway0EIP                                                                  Resource creation Initiated
+2020-05-22 19:54:00.761000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        FrontendRoute                                                                   Resource creation Initiated
+2020-05-22 19:54:00.490000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway1EIP                                                                  Resource creation Initiated
+2020-05-22 19:54:00.350000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway0EIP
+2020-05-22 19:54:00.283000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Route                        FrontendRoute
+2020-05-22 19:54:00.143000+00:00  CREATE_IN_PROGRESS  AWS::EC2::EIP                          NATGateway1EIP
+2020-05-22 19:53:59.216000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       BackendSubnet1
+2020-05-22 19:53:59.208000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       BackendSubnet0
+2020-05-22 19:53:59.145000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       FrontendSubnet0
+2020-05-22 19:53:59.125000+00:00  CREATE_COMPLETE     AWS::EC2::Subnet                       FrontendSubnet1
+2020-05-22 19:53:58.327000+00:00  CREATE_COMPLETE     AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment
+2020-05-22 19:53:43.932000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   BackendRouteTable1
+2020-05-22 19:53:43.819000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   FrontendRouteTable
+2020-05-22 19:53:43.738000+00:00  CREATE_COMPLETE     AWS::EC2::RouteTable                   BackendRouteTable0
+2020-05-22 19:53:43.191000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet1                                                                  Resource creation Initiated
+2020-05-22 19:53:43.187000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet1                                                                 Resource creation Initiated
+2020-05-22 19:53:43.102000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet0                                                                 Resource creation Initiated
+2020-05-22 19:53:43.025000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet0                                                                  Resource creation Initiated
+2020-05-22 19:53:43.009000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable1                                                              Resource creation Initiated
+2020-05-22 19:53:42.992000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment                                                       Resource creation Initiated
+2020-05-22 19:53:42.932000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   FrontendRouteTable                                                              Resource creation Initiated
+2020-05-22 19:53:42.797000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet1
+2020-05-22 19:53:42.735000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet1
+2020-05-22 19:53:42.712000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable0                                                              Resource creation Initiated
+2020-05-22 19:53:42.642000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       BackendSubnet0
+2020-05-22 19:53:42.634000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable1
+2020-05-22 19:53:42.631000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   FrontendRouteTable
+2020-05-22 19:53:42.561000+00:00  CREATE_IN_PROGRESS  AWS::EC2::Subnet                       FrontendSubnet0
+2020-05-22 19:53:42.541000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPCGatewayAttachment         InternetGatewayAttachment
+2020-05-22 19:53:42.364000+00:00  CREATE_IN_PROGRESS  AWS::EC2::RouteTable                   BackendRouteTable0
+2020-05-22 19:53:40.527000+00:00  CREATE_COMPLETE     AWS::EC2::VPC                          VPC
+2020-05-22 19:53:39.788000+00:00  CREATE_COMPLETE     AWS::EC2::InternetGateway              InternetGateway
+2020-05-22 19:53:23.965000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC                                                                             Resource creation Initiated
+2020-05-22 19:53:23.766000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway                                                                 Resource creation Initiated
+2020-05-22 19:53:23.474000+00:00  CREATE_IN_PROGRESS  AWS::EC2::InternetGateway              InternetGateway
+2020-05-22 19:53:23.470000+00:00  CREATE_IN_PROGRESS  AWS::EC2::VPC                          VPC
+2020-05-22 19:53:18.910000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack             tCaT-tag-test-scenario1-d44d324c-CoreStack-1C2UQZ8A1QKLH-VPCStack-467UKWMSA0XM  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 02:26PM
+-----------------------------------------------------------------------------
+

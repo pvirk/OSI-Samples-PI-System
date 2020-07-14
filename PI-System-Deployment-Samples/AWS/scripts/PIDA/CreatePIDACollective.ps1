@@ -37,6 +37,8 @@ param(
 
     # Set to enable catch to Write-AWSQuickStartException
     $ErrorActionPreference = "Stop"
+    Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
     Import-Module -Name C:\cfn\scripts\IPHelper.psm1
     Import-Module -Name OSIsoft.PowerShell -Force
 

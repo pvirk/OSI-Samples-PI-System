@@ -16,6 +16,7 @@ param (
     [Parameter(Position=1,Mandatory=$false)]
     [int]$Wait = 3
 )
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
 
 # Get the PI Server object
 $PIServer = Get-PIDataArchiveConnectionConfiguration $PIServerName -ErrorAction Stop

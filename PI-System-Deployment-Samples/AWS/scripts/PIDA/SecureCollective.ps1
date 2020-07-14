@@ -19,6 +19,8 @@
 # ***************************************************************************
 
 param ([String] $collectiveName)
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 $collective = Get-PIDataArchiveConnectionConfiguration $collectiveName | Connect-PIDataArchive | Get-PICollective
 $primary = $collective.PrimaryRole.Path
 $secondaries = $collective.Members | Where { $_.Role -eq [OSIsoft.PI.Configuration.RoleEntityType]::Secondary } | ForEach-Object Name

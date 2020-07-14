@@ -1,0 +1,19 @@
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-tag-test-scenario1-b1925299
+*****************************************************************************
+ResourceStatusReason:  
+Parameter validation failed: parameter value us-west-2 for parameter name KeyPairName
+does not exist
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                 ResourceStatusReason
+--------------------------------  ------------------  --------------------------  --------------------------------  ----------------------------------------------------------------------------------------------------
+2020-05-22 19:50:48.493000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-b1925299  Parameter validation failed: parameter value us-west-2 for parameter name KeyPairName does not exist
+2020-05-22 19:50:44.862000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-tag-test-scenario1-b1925299  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Friday, 22. May 2020 12:50PM
+-----------------------------------------------------------------------------
+

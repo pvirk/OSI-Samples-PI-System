@@ -1126,7 +1126,7 @@
                     "Ref": "PIDA0WaitHandle"
                 },
                 "Count": "2",
-                "Timeout": "3600"
+                "Timeout": "7200"
             }
         },
         "PIDA0WaitHandle": {
@@ -1722,7 +1722,7 @@
                     "Ref": "PIDA1WaitHandle"
                 },
                 "Count": "2",
-                "Timeout": "3600"
+                "Timeout": "7200"
             }
         },
         "PIDA1WaitHandle": {

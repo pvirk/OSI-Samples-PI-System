@@ -40,6 +40,8 @@ param(
     [switch] $ExcludeFutureArchives
 )
 
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 if ((Test-Path '.\SendPrimaryPublicCertToSecondaries.ps1') -eq $false) {
     Write-Error 'missing file: SendPrimaryPublicCertToSecondaries.ps1'
     return

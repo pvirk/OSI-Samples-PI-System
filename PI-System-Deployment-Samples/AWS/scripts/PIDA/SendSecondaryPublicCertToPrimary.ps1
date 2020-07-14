@@ -18,6 +18,8 @@
 # Remote Administration needs to be enabled on all collective members
 # ************************************************************************
 param ([String]$primary, [String[]]$secondaries, [String]$storePath)
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 if ((Test-Path '.\Get-RemoteCert.ps1') -eq $false)
 {
 	Write-Error 'missing file: Get-RemoteCert.ps1'

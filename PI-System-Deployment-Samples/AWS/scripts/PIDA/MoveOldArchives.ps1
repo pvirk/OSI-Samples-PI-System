@@ -26,6 +26,8 @@ param(
 	[Parameter(Position=3, Mandatory=$false)]
 	[switch] $MakeReadOnly = $false)
 
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 $MoveItem = {
     param([string] $Name, 
           [string] $MoveToLocation,

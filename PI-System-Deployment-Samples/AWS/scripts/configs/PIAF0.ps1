@@ -69,9 +69,9 @@ param(
 try {
     # Set to enable catch to Write-AWSQuickStartException
     $ErrorActionPreference = "Stop"
-
+    Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
     Import-Module $psscriptroot\IPHelper.psm1
-    Import-Module SqlServer -RequiredVersion 21.1.18218
+    Import-Module SqlServer -RequiredVersion 21.0.17279
 
     # Set Local Configuration Manager
     Configuration LCMConfig {

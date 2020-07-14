@@ -13,7 +13,7 @@ param(
     [string]$SSMParamName
 ) 
 
-$timeoutInSeconds = 600
+$timeoutInSeconds = 6000
 $elapsedSeconds = 0
 $intervalSeconds = 1
 $startTime = Get-Date

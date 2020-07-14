@@ -20,6 +20,8 @@ param(
 	[Parameter(Position=2, Mandatory=$false)]
 	[DateTime] $EndTime)
 
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 $srv = Get-PIDataArchiveConnectionConfiguration -Name $PIServerName -ErrorAction Stop
 $connection = Connect-PIDataArchive -PIDataArchiveConnectionConfiguration $srv -ErrorAction Stop
 

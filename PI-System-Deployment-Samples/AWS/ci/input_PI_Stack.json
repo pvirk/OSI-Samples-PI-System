@@ -1,0 +1,130 @@
+[
+  {
+    "ParameterKey": "BackendSubnet0ID",
+    "ParameterValue": "subnet-0f2c8aa3a7ae04f9a"
+  },
+  {
+    "ParameterKey": "BackendSubnet1ID",
+    "ParameterValue": "subnet-0f2c8aa3a7ae04f9a"
+  },
+  {
+    "ParameterKey": "DSS3BucketName",
+    "ParameterValue": "osisoft"
+  },
+  {
+    "ParameterKey": "DSS3BucketRegion",
+    "ParameterValue": "us-west-1"
+  },
+  {
+    "ParameterKey": "DSS3KeyPrefix",
+    "ParameterValue": "PI-System-Deployment-Samples/AWS"
+  },
+  {
+    "ParameterKey": "DeployHA",
+    "ParameterValue": "false"
+  },
+  {
+    "ParameterKey": "DomainAdminPassword",
+    "ParameterValue": "pePJahJq9x5666TPqxTzuH@GRqF$25Rt"
+  },
+  {
+    "ParameterKey": "DomainAdminUserName",
+    "ParameterValue": "piadmin"
+  },
+  {
+    "ParameterKey": "DomainDNSName",
+    "ParameterValue": "osideploysample.int"
+  },
+  {
+    "ParameterKey": "DomainMemberSGID",
+    "ParameterValue": "sg-0df83ce1414ed7355"
+  },
+  {
+    "ParameterKey": "DomainNetBIOSName",
+    "ParameterValue": "osideploysample"
+  },
+  {
+    "ParameterKey": "FrontendSubnet0ID",
+    "ParameterValue": "subnet-09d5709b00ea5adf7"
+  },
+  {
+    "ParameterKey": "FrontendSubnet1ID",
+    "ParameterValue": "subnet-09d5709b00ea5adf7"
+  },
+  {
+    "ParameterKey": "KeyPairName",
+    "ParameterValue": "us-west-1"
+  },
+  {
+    "ParameterKey": "NamePrefix",
+    "ParameterValue": "osisoft"
+  },
+  {
+    "ParameterKey": "PIAFInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIANInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIClientSGID",
+    "ParameterValue": "sg-09c6afe674071bc5c"
+  },
+  {
+    "ParameterKey": "PIDADiskSizeinGB",
+    "ParameterValue": "128"
+  },
+  {
+    "ParameterKey": "PIDAInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIInCIDR",
+    "ParameterValue": "10.0.0.0/16"
+  },
+  {
+    "ParameterKey": "PISystemsSGID",
+    "ParameterValue": "sg-0adb4f5fb0ac2f79a"
+  },
+  {
+    "ParameterKey": "PIVSInstanceType",
+    "ParameterValue": "t3.medium"
+  },
+  {
+    "ParameterKey": "SQLClientSGID",
+    "ParameterValue": "sg-06402def12b592163"
+  },
+  {
+    "ParameterKey": "SetupKitsS3BucketName",
+    "ParameterValue": "osisoftsetupkits-s3-us-west-1"
+  },
+  {
+    "ParameterKey": "SetupKitsS3BucketRegion",
+    "ParameterValue": "us-west-1"
+  },
+  {
+    "ParameterKey": "SetupKitsS3KeyPrefix",
+    "ParameterValue": "osisetupkits"
+  },
+  {
+    "ParameterKey": "SetupKitsS3PIFileName",
+    "ParameterValue": "PI-Server_2018-SP3-Patch-1_.exe"
+  },
+  {
+    "ParameterKey": "SetupKitsS3PIProductID",
+    "ParameterValue": "d47af9e0-e952-4068-b77b-52e5b4cf03b7"
+  },
+  {
+    "ParameterKey": "SetupKitsS3VisionFileName",
+    "ParameterValue": "PI-Vision_2019-Patch-1_.exe"
+  },
+  {
+    "ParameterKey": "TestFileName",
+    "ParameterValue": "PI-System-Deployment-Tests.zip"
+  },
+  {
+    "ParameterKey": "VPCID",
+    "ParameterValue": "vpc-0ee8235c3246e99a3"
+  }
+]

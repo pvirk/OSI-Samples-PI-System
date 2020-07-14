@@ -1,0 +1,12 @@
+global:
+  owner: mrvirk@amazon.com
+  qsname: AWS
+  regions:
+    - us-west-2
+  reporting: true
+tests:
+  test-scenario1:
+    parameter_input: input_us_west_2_pi-lab-team.json
+    template_file: DSMasterStack.template
+    regions:
+    - us-west-2

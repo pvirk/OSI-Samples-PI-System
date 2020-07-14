@@ -15,6 +15,8 @@
 # Remote Administration needs to be enabled on all collective members
 # ************************************************************************
 param ([String]$machineName, [String]$storePath)
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
+
 $path = $storePath.Split("\")
 if ($path.Count -eq 2)
 {

@@ -1,0 +1,138 @@
+[
+  {
+    "ParameterKey": "ADServerInstanceType",
+    "ParameterValue": "t3.medium"
+  },
+  {
+    "ParameterKey": "AvailabilityZones",
+    "ParameterValue": "us-west-2a,us-west-2c"
+  },
+  {
+    "ParameterKey": "DSS3BucketName",
+    "ParameterValue": "osisoft-us-west-2-pi-lab-team"
+  },
+  {
+    "ParameterKey": "DSS3BucketRegion",
+    "ParameterValue": "us-west-2"
+  },
+  {
+    "ParameterKey": "DSS3KeyPrefix",
+    "ParameterValue": "PI-System-Deployment-Samples/AWS"
+  },
+  {
+    "ParameterKey": "DeployHA",
+    "ParameterValue": "false"
+  },
+  {
+    "ParameterKey": "DomainAdminPassword",
+    "ParameterValue": "pePJahJq9x5666TPqxTzuH@GRqF$25Rt"
+  },
+  {
+    "ParameterKey": "DomainAdminUserName",
+    "ParameterValue": "piadmin"
+  },
+  {
+    "ParameterKey": "DomainDNSName",
+    "ParameterValue": "osideploysample.int"
+  },
+  {
+    "ParameterKey": "DomainNetBIOSName",
+    "ParameterValue": "osideploysample"
+  },
+  {
+    "ParameterKey": "KeyPairName",
+    "ParameterValue": "pi-lab-team"
+  },
+  {
+    "ParameterKey": "NamePrefix",
+    "ParameterValue": "osisoft"
+  },
+  {
+    "ParameterKey": "PIAFInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIANInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIDADiskSizeinGB",
+    "ParameterValue": "128"
+  },
+  {
+    "ParameterKey": "PIDAInstanceType",
+    "ParameterValue": "m5.xlarge"
+  },
+  {
+    "ParameterKey": "PIInCIDR",
+    "ParameterValue": "10.0.0.0/16"
+  },
+  {
+    "ParameterKey": "PIVSInstanceType",
+    "ParameterValue": "t3.medium"
+  },
+  {
+    "ParameterKey": "RDGWCIDR",
+    "ParameterValue": "10.0.0.0/16"
+  },
+  {
+    "ParameterKey": "RDGWInstanceType",
+    "ParameterValue": "t3.large"
+  },
+  {
+    "ParameterKey": "RestoreModePassword",
+    "ParameterValue": "LZnO$XGh%.CRQZa@4yglK3U*k9AuC;F3"
+  },
+  {
+    "ParameterKey": "SQLFileServerInstanceType",
+    "ParameterValue": "t3.small"
+  },
+  {
+    "ParameterKey": "SQLNodeInstanceType",
+    "ParameterValue": "m4.xlarge"
+  },
+  {
+    "ParameterKey": "SQLServiceAccount",
+    "ParameterValue": "svc-sql0"
+  },
+  {
+    "ParameterKey": "SetupKitsS3BucketName",
+    "ParameterValue": "osisoftsetupkits-s3-us-west-2-pi-lab-team"
+  },
+  {
+    "ParameterKey": "SetupKitsS3BucketRegion",
+    "ParameterValue": "us-west-2"
+  },
+  {
+    "ParameterKey": "SetupKitsS3KeyPrefix",
+    "ParameterValue": "osisetupkits"
+  },
+  {
+    "ParameterKey": "SetupKitsS3PIFileName",
+    "ParameterValue": "PI-Server_2018-SP3-Patch-1_.exe"
+  },
+  {
+    "ParameterKey": "SetupKitsS3PIProductID",
+    "ParameterValue": "d47af9e0-e952-4068-b77b-52e5b4cf03b7"
+  },
+  {
+    "ParameterKey": "SetupKitsS3VisionFileName",
+    "ParameterValue": "PI-Vision_2019-Patch-1_.exe"
+  },
+  {
+    "ParameterKey": "TestFileName",
+    "ParameterValue": "PI-System-Deployment-Tests.zip"
+  },
+  {
+    "ParameterKey": "Volume1Size",
+    "ParameterValue": "500"
+  },
+  {
+    "ParameterKey": "Volume2Size",
+    "ParameterValue": "500"
+  },
+  {
+    "ParameterKey": "Volume3Size",
+    "ParameterValue": "500"
+  }
+]

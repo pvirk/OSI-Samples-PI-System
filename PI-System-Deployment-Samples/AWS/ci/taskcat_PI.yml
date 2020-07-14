@@ -1,0 +1,12 @@
+global:
+  owner: mrvirk@amazon.com
+  qsname: AWS
+  regions:
+    - us-west-1
+  reporting: true
+tests:
+  test-scenario1:
+    parameter_input: input_PI_Stack.json
+    template_file: DSPIStack.template
+    regions:
+    - us-west-1

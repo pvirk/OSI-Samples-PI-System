@@ -17,6 +17,7 @@ param(
     [string] $BackupDirectory
 )
 
+Start-Transcript -Path C:\cfn\log\$($MyInvocation.MyCommand.Name).log -Append
 #iterate through each server passed in
 foreach($servername in $PIServerName)
 {

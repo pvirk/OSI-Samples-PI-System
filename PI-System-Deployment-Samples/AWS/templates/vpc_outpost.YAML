@@ -1,0 +1,109 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Internet and NAT Gateway(s), and Routes. Can be deployed across 2 AZs for HA, through duplicate
+    Subnets. vpc-deploysample0
+Parameters:
+    NamePrefix:
+        Type: String
+        AllowedPattern: ^[0-9a-zA-Z]+([0-9a-zA-Z-]*[0-9a-zA-Z])*$
+        ConstraintDescription: Prefix can include numbers, lowercase letters, uppercase
+            letters, and hyphens (-). It cannot start or end with a hyphen (-).
+        Description: Prefix used when naming resources, inputs, and outputs. Maximum
+            24 characters
+        MaxLength: '24'
+
+    VPCID:
+        Description: ID of the VPC (e.g., vpc-0343606e)
+        Type: AWS::EC2::VPC::Id
+
+    BackendSubnet0ID:
+        Description: ID of the backend subnet 1 in Availability Zone 1.
+        Type: AWS::EC2::Subnet::Id
+
+    FrontendSubnet0ID:
+        Description: ID of the frontend subnet 0 in Availability Zone 1.
+        Type: AWS::EC2::Subnet::Id
+
+Resources:
+    NATGateway0:
+        Type: AWS::EC2::NatGateway
+        Properties:
+            AllocationId:
+                Fn::GetAtt:
+                - NATGateway0EIP
+                - AllocationId
+            SubnetId:
+                Ref: FrontendSubnet0ID
+            Tags:
+            -   Key: Name
+                Value:
+                    Fn::Sub: ${NamePrefix}-NATGateway0
+    NATGateway0EIP:
+        Type: AWS::EC2::EIP
+        Properties:
+            Domain: vpc
+        DependsOn:
+        - InternetGatewayAttachment
+    InternetGateway:
+        Type: AWS::EC2::InternetGateway
+        Properties:
+            Tags:
+            -   Key: Name
+                Value:
+                    Fn::Sub: ${NamePrefix}-InternetGateway
+    BackendRouteTable0:
+        Type: AWS::EC2::RouteTable
+        Properties:
+            VpcId:
+                Ref: VPCID
+            Tags:
+            -   Key: Name
+                Value:
+                    Fn::Sub: ${NamePrefix}-BackendRouteTable0
+    BackendRoute0:
+        Type: AWS::EC2::Route
+        Properties:
+            RouteTableId:
+                Ref: BackendRouteTable0
+            DestinationCidrBlock: 0.0.0.0/0
+            NatGatewayId:
+                Ref: NATGateway0
+    FrontendRouteTable:
+        Type: AWS::EC2::RouteTable
+        Properties:
+            VpcId:
+                Ref: VPCID
+            Tags:
+            -   Key: Name
+                Value:
+                    Fn::Sub: ${NamePrefix}-FrontendRouteTable
+    FrontendRoute:
+        Type: AWS::EC2::Route
+        Properties:
+            RouteTableId:
+                Ref: FrontendRouteTable
+            DestinationCidrBlock: 0.0.0.0/0
+            GatewayId:
+                Ref: InternetGateway
+        DependsOn:
+        - InternetGatewayAttachment
+    FrontendSubnet0RouteLink:
+        Type: AWS::EC2::SubnetRouteTableAssociation
+        Properties:
+            RouteTableId:
+                Ref: FrontendRouteTable
+            SubnetId:
+                Ref: FrontendSubnet0ID
+    BackendSubnet0RouteLink:
+        Type: AWS::EC2::SubnetRouteTableAssociation
+        Properties:
+            RouteTableId:
+                Ref: BackendRouteTable0
+            SubnetId:
+                Ref: BackendSubnet0ID
+    InternetGatewayAttachment:
+        Type: AWS::EC2::VPCGatewayAttachment
+        Properties:
+            InternetGatewayId:
+                Ref: InternetGateway
+            VpcId:
+                Ref: VPCID
